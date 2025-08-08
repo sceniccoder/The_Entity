@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinderror - Find Someone Who Crashes Like You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <div class="hero-section">
+            <div class="hero-background">
+                <div class="code-particles"></div>
+            </div>
+            <div class="hero-content">
+                <div class="logo-container">
+                    <h1 class="logo">
+                        <span class="logo-text">Tinderror</span>
+                        <span class="logo-icon">💻💔</span>
+                    </h1>
+                    <p class="tagline">Find Someone Who Crashes Like You</p>
+                </div>
+                
+                <div class="hero-text">
+                    <h2>Swipe right on someone who compiles your heart ❤️</h2>
+                    <p>Where syntax errors become love connections and infinite loops lead to infinite love.</p>
+                </div>
+                
+                <div class="cta-buttons">
+                    <button class="cta-primary" onclick="showPage('signup')">
+                        <i class="fas fa-bug"></i>
+                        Start Debugging Your Love Life
+                    </button>
+                    <button class="cta-secondary" onclick="showPage('login')">
+                        Already have an account? Login
+                    </button>
+                </div>
+                
+                <div class="features-preview">
+                    <div class="feature-item">
+                        <i class="fas fa-code"></i>
+                        <span>Code Analysis</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Error Matching</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-comments"></i>
+                        <span>Pickup Lines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2>Login to Tinderror</h2>
+                <p class="auth-subtitle">Welcome back, debugging champion!</p>
+                
+                <form class="auth-form" onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <input type="email" id="login-email" required>
+                        <label for="login-email">Email</label>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="login-password" required>
+                        <label for="login-password">Password</label>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    </button>
+                </form>
+                
+                <p class="auth-footer">
+                    Passwords are case-sensitive, unlike your crush 😏
+                </p>
+                
+                <div class="auth-switch">
+                    Don't have an account? 
+                    <a href="#" onclick="showPage('signup')">Sign up</a>
+                </div>
+                
+                <button class="back-btn" onclick="showPage('landing')">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Page -->
+    <div id="signup-page" class="page">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2>Join Tinderror</h2>
+                <p class="auth-subtitle">Time to debug your love life!</p>
+                
+                <form class="auth-form" onsubmit="handleSignup(event)">
+                    <div class="input-group">
+                        <input type="text" id="signup-name" required>
+                        <label for="signup-name">Full Name</label>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="number" id="signup-age" required min="18" max="99">
+                        <label for="signup-age">Age</label>
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="email" id="signup-email" required>
+                        <label for="signup-email">Email</label>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <select id="signup-ide" required>
+                            <option value="">Select Favorite IDE</option>
+                            <option value="VS Code">VS Code</option>
+                            <option value="IntelliJ IDEA">IntelliJ IDEA</option>
+                            <option value="Sublime Text">Sublime Text</option>
+                            <option value="Atom">Atom</option>
+                            <option value="WebStorm">WebStorm</option>
+                            <option value="Eclipse">Eclipse</option>
+                            <option value="Vim">Vim</option>
+                            <option value="Emacs">Emacs</option>
+                        </select>
+                        <label for="signup-ide">Favorite IDE</label>
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <select id="signup-experience" required>
+                            <option value="">Experience Level</option>
+                            <option value="Beginner">Beginner (0-2 years)</option>
+                            <option value="Intermediate">Intermediate (2-5 years)</option>
+                            <option value="Senior">Senior (5-10 years)</option>
+                            <option value="Expert">Expert (10+ years)</option>
+                        </select>
+                        <label for="signup-experience">Experience Level</label>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="signup-password" required>
+                        <label for="signup-password">Password</label>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="signup-confirm-password" required>
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn">
+                        <i class="fas fa-heart"></i>
+                        Create Account
+                    </button>
+                </form>
+                
+                <p class="auth-footer">
+                    Remember: Good code is like a good relationship - it should compile on the first try! 💕
+                </p>
+                
+                <div class="auth-switch">
+                    Already have an account? 
+                    <a href="#" onclick="showPage('login')">Login</a>
+                </div>
+                
+                <button class="back-btn" onclick="showPage('landing')">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="page">
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo-mini">
+                        <span>T</span>
+                        <i class="fas fa-bug"></i>
+                    </div>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img id="user-avatar-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="User">
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="user-info">
+                        <h3 id="user-display-name">Alex Developer</h3>
+                        <p id="user-display-title">JavaScript Ninja</p>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" onclick="showDashboardSection('code-editor')">
+                        <i class="fas fa-code"></i>
+                        <span>Code Editor</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showDashboardSection('matches')">
+                        <i class="fas fa-heart"></i>
+                        <span>Matches</span>
+                        <span class="notification-badge">3</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showDashboardSection('profile')">
+                        <i class="fas fa-user-circle"></i>
+                        <span>My Profile</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showDashboardSection('pickup-generator')">
+                        <i class="fas fa-magic"></i>
+                        <span>Pickup Generator</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showPage('history')">
+                        <i class="fas fa-history"></i>
+                        <span>Error History</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showPage('settings')">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </nav>
+                
+                <div class="sidebar-footer">
+                    <button class="logout-btn" onclick="showPage('landing')">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Code Editor Section -->
+                <div id="code-editor-section" class="dashboard-section active">
+                    <div class="section-header">
+                        <h2>Submit Your Code</h2>
+                        <p>Let our AI analyze your coding style to find compatible matches!</p>
+                    </div>
+                    
+                    <div class="editor-container">
+                        <div class="editor-header">
+                            <div class="language-selector">
+                                <select id="language-select" onchange="updateLanguageHighlighting()">
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="python">Python</option>
+                                    <option value="java">Java</option>
+                                    <option value="cpp">C++</option>
+                                    <option value="typescript">TypeScript</option>
+                                    <option value="go">Go</option>
+                                    <option value="rust">Rust</option>
+                                    <option value="php">PHP</option>
+                                    <option value="ruby">Ruby</option>
+                                    <option value="swift">Swift</option>
+                                </select>
+                            </div>
+                            <div class="editor-actions">
+                                <button class="round-action-btn run-btn" onclick="runCode()" title="Run Code Analysis">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button class="round-action-btn analyze-btn" onclick="analyzeCodeAdvanced()" title="Deep Analysis">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="code-editor">
+                            <textarea id="code-input" placeholder="// Write your code here...
+function findLove() {
+    if (bugs.length > 0) {
+        return 'Perfect match found!';
+    }
+    return 'Keep debugging...';
+}"></textarea>
+                        </div>
+                        
+                        <div class="editor-output">
+                            <div id="error-analysis" class="analysis-card">
+                                <h3>Error Analysis</h3>
+                                <div class="analysis-content">
+                                    <div class="error-type">
+                                        <span class="error-badge syntax">Syntax Error</span>
+                                        <p>Missing semicolon detected - You're the type who lives dangerously!</p>
+                                    </div>
+                                    <div class="compatibility-score">
+                                        <span class="score">85%</span>
+                                        <p>Compatible with other syntax rebels</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="pickup-line" class="pickup-card">
+                                <h3>Generated Pickup Line</h3>
+                                <div class="pickup-content">
+                                    <p class="pickup-text">"Are you a semicolon? Because you complete all my statements! 💕"</p>
+                                    <p class="pickup-translation">Malayalam: "Nee oru semicolon aano? Ente ella statements um complete cheyyunnath! 💕"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Section -->
+                <div id="profile-section" class="dashboard-section">
+                    <div class="section-header">
+                        <h2>My Profile</h2>
+                        <p>Customize your developer profile to attract the perfect coding companion!</p>
+                    </div>
+                    
+                    <div class="profile-container">
+                        <div class="profile-card">
+                            <div class="profile-header">
+                                <div class="profile-avatar-section">
+                                    <div class="profile-avatar-large">
+                                        <img id="profile-avatar-display" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Profile">
+                                        <button class="avatar-change-btn" onclick="changeAvatar()">
+                                            <i class="fas fa-camera"></i>
+                                        </button>
+                                    </div>
+                                    <div class="profile-status">
+                                        <span class="status-badge online">Online & Debugging</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="profile-basic-info">
+                                    <h2 id="profile-name-display">Alex Developer</h2>
+                                    <p class="profile-age" id="profile-age-display">25 years old</p>
+                                    <p class="profile-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Remote Developer
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Favorite IDE:</span>
+                                    <span class="detail-value" id="profile-ide-display">VS Code</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Experience Level:</span>
+                                    <span class="detail-value" id="profile-experience-display">Senior Developer</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Primary Languages:</span>
+                                    <div class="language-tags" id="profile-languages-display">
+                                        <span class="lang-tag">JavaScript</span>
+                                        <span class="lang-tag">Python</span>
+                                        <span class="lang-tag">TypeScript</span>
+                                    </div>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Coding Personality:</span>
+                                    <div class="personality-tags" id="profile-personality-display">
+                                        <span class="personality-tag">Syntax Perfectionist</span>
+                                        <span class="personality-tag">Clean Code Advocate</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-bio">
+                                <h3>About Me</h3>
+                                <p id="profile-bio-display">
+                                    Passionate developer who believes that clean code is like a love letter to the next developer. 
+                                    I debug with patience and refactor with precision. Looking for someone who appreciates 
+                                    well-documented code and meaningful variable names! 💻❤️
+                                </p>
+                            </div>
+                            
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">47</span>
+                                    <span class="stat-label">Bugs Fixed</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Perfect Matches</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">89%</span>
+                                    <span class="stat-label">Compatibility Rate</span>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-actions">
+                                <button class="edit-profile-btn" onclick="openProfileEditor()">
+                                    <i class="fas fa-edit"></i>
+                                    Edit Profile
+                                </button>
+                                
+                                <div class="secondary-actions">
+                                    <button class="action-btn secondary" onclick="shareProfile()">
+                                        <i class="fas fa-share-alt"></i>
+                                        Share Profile
+                                    </button>
+                                    <button class="action-btn secondary" onclick="viewSettings()">
+                                        <i class="fas fa-cog"></i>
+                                        Settings
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pickup Generator Section -->
+                <div id="pickup-generator-section" class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Pickup Line Generator</h2>
+                        <p>Generate the perfect programming pickup lines for any situation!</p>
+                    </div>
+                    
+                    <div class="generator-container">
+                        <div class="generator-controls">
+                            <div class="control-group">
+                                <label>Programming Language:</label>
+                                <select id="pickup-language-select">
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="python">Python</option>
+                                    <option value="java">Java</option>
+                                    <option value="cpp">C++</option>
+                                    <option value="typescript">TypeScript</option>
+                                    <option value="go">Go</option>
+                                    <option value="rust">Rust</option>
+                                    <option value="php">PHP</option>
+                                </select>
+                            </div>
+                            
+                            <div class="control-group">
+                                <label>Pickup Style:</label>
+                                <select id="pickup-style-select">
+                                    <option value="romantic">Romantic</option>
+                                    <option value="funny">Funny</option>
+                                    <option value="nerdy">Super Nerdy</option>
+                                    <option value="smooth">Smooth Operator</option>
+                                    <option value="debugging">Debugging Theme</option>
+                                </select>
+                            </div>
+                            
+                            <div class="control-group">
+                                <label>Translation:</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="malayalam-toggle" checked>
+                                    <span class="slider"></span>
+                                    <span class="toggle-label">Include Malayalam</span>
+                                </div>
+                            </div>
+                            
+                            <button class="generate-btn" onclick="generateNewPickupLine()">
+                                <i class="fas fa-magic"></i>
+                                Generate New Line
+                            </button>
+                        </div>
+                        
+                        <div class="pickup-display">
+                            <div class="pickup-card-generator">
+                                <h3>Your Generated Pickup Line:</h3>
+                                <div class="pickup-content-generator">
+                                    <p class="pickup-text" id="generated-pickup-english">
+                                        "Are you a compiler? Because you make my heart race with zero errors! 💻❤️"
+                                    </p>
+                                    <p class="pickup-translation" id="generated-pickup-malayalam">
+                                        Malayalam: "Nee oru compiler aano? Because nee ente heart race aakkunnath zero errors ode! 💻❤️"
+                                    </p>
+                                </div>
+                                
+                                <div class="pickup-actions">
+                                    <button class="action-btn copy-btn" onclick="copyPickupLine()">
+                                        <i class="fas fa-copy"></i>
+                                        Copy
+                                    </button>
+                                    <button class="action-btn favorite-btn" onclick="favoritePickupLine()">
+                                        <i class="fas fa-heart"></i>
+                                        Favorite
+                                    </button>
+                                    <button class="action-btn share-btn" onclick="sharePickupLine()">
+                                        <i class="fas fa-share"></i>
+                                        Share
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="pickup-history">
+                                <h4>Recent Favorites:</h4>
+                                <div class="favorite-lines" id="favorite-pickup-lines">
+                                    <div class="favorite-item">
+                                        <p>"You must be a recursive function, because I can't stop calling you!"</p>
+                                        <small>JavaScript • Romantic</small>
+                                    </div>
+                                    <div class="favorite-item">
+                                        <p>"Are you a Python list? Because I want to append myself to you!"</p>
+                                        <small>Python • Funny</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Matches Section -->
+                <div id="matches-section" class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Your Matches</h2>
+                        <p>Swipe through developers who share your coding quirks!</p>
+                    </div>
+                    
+                    <div class="match-cards-container">
+                        <div class="match-card" id="match-card-1">
+                            <div class="match-header">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face" alt="Sarah">
+                                <div class="match-info">
+                                    <h3>Sarah, 26</h3>
+                                    <p><i class="fas fa-laptop-code"></i> VS Code Enthusiast</p>
+                                    <div class="compatibility-badge">
+                                        <span>92% Match</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="error-personalities">
+                                <span class="error-tag">Off-by-one Expert</span>
+                                <span class="error-tag">Null Pointer Ninja</span>
+                                <span class="error-tag">Async/Await Lover</span>
+                            </div>
+                            
+                            <div class="pickup-line-card">
+                                <p>"Are you a promise? Because I'd await you forever! 💖"</p>
+                                <small>Malayalam: "Nee oru promise aano? Njaan ninne forever await cheyyum! 💖"</small>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <button class="swipe-btn reject" onclick="swipeCard('match-card-1', 'left')">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <button class="swipe-btn like" onclick="swipeCard('match-card-1', 'right')">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="match-card" id="match-card-2">
+                            <div class="match-header">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Mike">
+                                <div class="match-info">
+                                    <h3>Mike, 29</h3>
+                                    <p><i class="fas fa-laptop-code"></i> IntelliJ IDEA Fan</p>
+                                    <div class="compatibility-badge">
+                                        <span>87% Match</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="error-personalities">
+                                <span class="error-tag">Stack Overflow Surfer</span>
+                                <span class="error-tag">Infinite Loop Creator</span>
+                                <span class="error-tag">Memory Leak Hunter</span>
+                            </div>
+                            
+                            <div class="pickup-line-card">
+                                <p>"You must be a recursive function, because I can't stop calling you! 🔄❤️"</p>
+                                <small>Malayalam: "Nee oru recursive function aayirikkum, because njaan ninne call cheyyunna stop cheyyan kazhiyunilla! 🔄❤️"</small>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <button class="swipe-btn reject" onclick="swipeCard('match-card-2', 'left')">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <button class="swipe-btn like" onclick="swipeCard('match-card-2', 'right')">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error History Page -->
+    <div id="history-page" class="page">
+        <div class="history-container">
+            <div class="page-header">
+                <button class="back-btn" onclick="showPage('dashboard')">
+                    <i class="fas fa-arrow-left"></i> Back to Dashboard
+                </button>
+                <h1>Error Personality History</h1>
+                <p>Your journey through the world of bugs and love connections</p>
+            </div>
+            
+            <div class="progress-section">
+                <h2>Love Debugging Progress</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%"></div>
+                    <span class="progress-text">75% to Finding True Love</span>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Syntax Error Personality</h3>
+                        <p class="timeline-date">2 days ago</p>
+                        <p>You forgot a semicolon and found your soulmate! Sarah loves developers who live on the edge.</p>
+                        <div class="error-badge syntax">Syntax Rebel</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Null Pointer Exception</h3>
+                        <p class="timeline-date">1 week ago</p>
+                        <p>Your null pointer exception revealed your caring nature - you always check if someone exists before calling them!</p>
+                        <div class="error-badge runtime">Caring Debugger</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Infinite Loop Master</h3>
+                        <p class="timeline-date">2 weeks ago</p>
+                        <p>Your infinite loop shows commitment - when you love someone, it's forever!</p>
+                        <div class="error-badge logic">Eternal Lover</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Memory Leak Detective</h3>
+                        <p class="timeline-date">3 weeks ago</p>
+                        <p>You never forget to clean up your variables, just like how you never forget an anniversary!</p>
+                        <div class="error-badge performance">Responsible Partner</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Page -->
+    <div id="settings-page" class="page">
+        <div class="settings-container">
+            <div class="page-header">
+                <button class="back-btn" onclick="showPage('dashboard')">
+                    <i class="fas fa-arrow-left"></i> Back to Dashboard
+                </button>
+                <h1>Settings</h1>
+                <p>Customize your Tinderror experience</p>
+            </div>
+            
+            <div class="settings-sections">
+                <div class="settings-section">
+                    <h2>Appearance</h2>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span>Dark Mode</span>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="dark-mode-toggle" checked onchange="toggleDarkMode()">
+                                <span class="slider"></span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h2>Preferences</h2>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span>Preferred Programming Language</span>
+                            <select class="setting-select">
+                                <option value="javascript">JavaScript</option>
+                                <option value="python">Python</option>
+                                <option value="java">Java</option>
+                                <option value="cpp">C++</option>
+                                <option value="typescript">TypeScript</option>
+                                <option value="go">Go</option>
+                            </select>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span>Match Radius</span>
+                            <select class="setting-select">
+                                <option value="local">Local developers only</option>
+                                <option value="remote">Remote-friendly</option>
+                                <option value="global">Global (any timezone)</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h2>Notifications</h2>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span>New Matches</span>
+                            <div class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span>Error Analysis Complete</span>
+                            <div class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="settings-section danger-zone">
+                    <h2>Danger Zone</h2>
+                    <div class="setting-item">
+                        <button class="danger-btn" onclick="resetHeartCache()">
+                            <i class="fas fa-heart-broken"></i>
+                            Reset Heart Cache
+                        </button>
+                        <p class="setting-description">Clear all your matches and start fresh. This action cannot be undone!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Editor Modal -->
+    <div id="profile-editor-modal" class="modal">
+        <div class="modal-content profile-editor">
+            <div class="modal-header">
+                <h2>Edit Your Profile</h2>
+                <button class="close-btn" onclick="closeProfileEditor()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <form class="profile-form" onsubmit="saveProfile(event)">
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> Basic Information</h3>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <i class="input-icon fas fa-signature"></i>
+                            <input type="text" id="edit-name" required>
+                            <label for="edit-name">Full Name</label>
+                        </div>
+                        <div class="input-group">
+                            <i class="input-icon fas fa-birthday-cake"></i>
+                            <input type="number" id="edit-age" required min="18" max="99">
+                            <label for="edit-age">Age</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <i class="input-icon fas fa-venus-mars"></i>
+                            <select id="edit-gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="non-binary">Non-Binary</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                            <label for="edit-gender">Gender</label>
+                        </div>
+                        <div class="input-group">
+                            <i class="input-icon fas fa-search-heart"></i>
+                            <select id="edit-preference" required>
+                                <option value="">Looking for</option>
+                                <option value="male">Male developers</option>
+                                <option value="female">Female developers</option>
+                                <option value="non-binary">Non-binary developers</option>
+                                <option value="all">All developers</option>
+                            </select>
+                            <label for="edit-preference">Dating Preference</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3><i class="fas fa-laptop-code"></i> Professional Details</h3>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <i class="input-icon fas fa-code"></i>
+                            <select id="edit-ide" required>
+                                <option value="">Select IDE</option>
+                                <option value="VS Code">VS Code</option>
+                                <option value="IntelliJ IDEA">IntelliJ IDEA</option>
+                                <option value="Sublime Text">Sublime Text</option>
+                                <option value="Atom">Atom</option>
+                                <option value="WebStorm">WebStorm</option>
+                                <option value="Eclipse">Eclipse</option>
+                                <option value="Vim">Vim</option>
+                                <option value="Emacs">Emacs</option>
+                                <option value="PyCharm">PyCharm</option>
+                                <option value="Android Studio">Android Studio</option>
+                            </select>
+                            <label for="edit-ide">Favorite IDE</label>
+                        </div>
+                        <div class="input-group">
+                            <i class="input-icon fas fa-chart-line"></i>
+                            <select id="edit-experience" required>
+                                <option value="">Select Experience</option>
+                                <option value="Beginner">🌱 Beginner (0-2 years)</option>
+                                <option value="Intermediate">🚀 Intermediate (2-5 years)</option>
+                                <option value="Senior">⭐ Senior (5-10 years)</option>
+                                <option value="Expert">🏆 Expert (10+ years)</option>
+                                <option value="Legendary">👑 Legendary (15+ years)</option>
+                            </select>
+                            <label for="edit-experience">Experience Level</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3><i class="fas fa-heart"></i> About You</h3>
+                    <div class="input-group bio-group">
+                        <i class="input-icon fas fa-pen-fancy"></i>
+                        <textarea id="edit-bio" rows="4" required placeholder="Tell other developers about yourself, your coding philosophy, and what you're looking for..."></textarea>
+                        <label for="edit-bio">Bio</label>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeProfileEditor()">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i>
+                        Save Profile
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Match Found Modal -->
+    <div id="match-modal" class="modal">
+        <div class="modal-content match-celebration">
+            <div class="celebration-animation">
+                <div class="hearts"></div>
+                <div class="confetti"></div>
+            </div>
+            <h2>It's a Match! 💕</h2>
+            <p>You and <span id="match-name">Sarah</span> both love creating beautiful bugs together!</p>
+            <div class="modal-actions">
+                <button class="modal-btn primary" onclick="openChatWindow()">
+                    <i class="fas fa-comments"></i>
+                    Start Chatting
+                </button>
+                <button class="modal-btn secondary" onclick="closeMatchModal()">
+                    Keep Swiping
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Window Modal -->
+    <div id="chat-modal" class="modal chat-modal">
+        <div class="modal-content chat-window">
+            <div class="chat-header">
+                <div class="chat-user-info">
+                    <img id="chat-user-avatar" src="" alt="Chat user">
+                    <div class="chat-user-details">
+                        <h3 id="chat-user-name">Sarah</h3>
+                        <p class="chat-user-status">Online</p>
+                    </div>
+                </div>
+                <button class="close-chat" onclick="closeChatWindow()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="message received">
+                    <div class="message-content">
+                        <p>Hey there! I saw your code and I must say, your variable naming convention is impressive! 💻</p>
+                        <span class="message-time">2:30 PM</span>
+                    </div>
+                </div>
+                <div class="message received">
+                    <div class="message-content">
+                        <p>Are you a compiler? Because you make my heart run without errors! 😄</p>
+                        <span class="message-time">2:31 PM</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <input type="text" id="chat-input" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
+                    <button class="send-btn" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
