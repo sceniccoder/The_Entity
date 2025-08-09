@@ -72,30 +72,30 @@ npx http-server
 
 ### Screenshots
 
-![Landing Page](landing-page.png)
+![Landing Page](landing-page.jpeg)
 *The welcoming landing page with the iconic Tinderror logo and call-to-action buttons. Features a dark theme with neon accents that developers love.*
 
-![Dashboard](dashboard.png)  
+![Dashboard](dashboard.jpeg)  
 *Main dashboard showing the code editor where users submit their buggy code for analysis. Includes language selection and round analysis buttons.*
 
-![Match Results](match-results.png)
+![Match Results](match-results.jpeg)
 *The swiping interface displaying potential matches with compatibility scores, error types, and personalized pickup lines based on programming languages.*
 
-![Profile Editor](profile-editor.png)
+![Profile Editor](profile-editor.jpeg)
 *Enhanced profile editing modal with proper icons, gender selection, and dating preferences for inclusive matching.*
 
-![Code Analysis](code-analysis.png)
+![Code Analysis](code-analysis.jpeg)
 *Advanced code analysis results showing technical metrics, personality insights, and relationship compatibility in a professional dashboard layout.*
 
-![Pickup Generator](pickup-generator.png)
+![Pickup Generator](pickup-generator.jpeg)
 *The pickup line generator with programming language-specific romantic one-liners, including Malayalam translations for cultural diversity.*
 
 ### Diagrams
 
-![Workflow](tinderror-workflow.png)
+![Workflow](tinderror-workflow.jpeg)
 *Application workflow showing user journey from registration through code analysis to finding matches. Demonstrates the unique matching algorithm based on programming errors.*
 
-![Architecture](system-architecture.png)
+![Architecture](system-architecture.jpeg)
 *System architecture diagram showing the single-page application structure with component-based sections and state management flow.*
 
 ## Project Demo
