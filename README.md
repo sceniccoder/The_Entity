@@ -396,6 +396,16 @@ The application includes:
 
 ---
 
+### Team Contributions
+
+- **Soorya Narayan:**  Originated the Tinderror concept, designed the core user journey, 
+                crafted Malayalam-English hybrid pickup lines, and defined the UI/UX 
+                 low for a Tinder-style interface.
+
+**Aaron Varkey Mohan:** Developed the backend matching logic, implemented the error
+       detection engine for submitted code, and integrated real-time 
+        swipe-based matching functionality.
+
 **Tinderror** - Where bugs become features and errors lead to love! 💻💕
 
 *"Swipe right on someone who compiles your heart!"*
