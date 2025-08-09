@@ -1,7 +1,7 @@
-# Tinderror ��
+# Tinderror
 
 ## Basic Details
-**Team Name:** Debug Hearts  
+**Team Name:** The Entity
 **Team Members:**
 - **Team Lead:** M Soorya Narayan - Muthoot Institute of Technology and Science
 - **Team Co-Lead:** Aaron Varkey Mohan - Muthoot Institute of Technology and Science 
