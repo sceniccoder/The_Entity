@@ -3,9 +3,9 @@
 ## Basic Details
 **Team Name:** Debug Hearts  
 **Team Members:**
-- **Team Lead:** Alex Developer - Tech University
-- **Member 2:** Sarah CodeMaster - Innovation College  
-- **Member 3:** Mike BugHunter - Development Institute
+- **Team Lead:** M Soorya Narayan - Muthoot Institute of Technology and Science
+- **Member 2:** Aaron Varkey Mohan - Muthoot Institute of Technology and Science 
+
 
 ## Project Description
 Tinderror is a revolutionary dating app that matches developers based on their programming errors and coding style. Where bugs become features and syntax errors lead to love connections! It's the only dating platform where your stack overflow searches and infinite loops are actually attractive qualities.
@@ -72,43 +72,37 @@ npx http-server
 
 ### Screenshots
 
-![Landing Page](screenshots/landing-page.png)
+![Landing Page](landing-page.png)
 *The welcoming landing page with the iconic Tinderror logo and call-to-action buttons. Features a dark theme with neon accents that developers love.*
 
-![Dashboard](screenshots/dashboard.png)  
+![Dashboard](dashboard.png)  
 *Main dashboard showing the code editor where users submit their buggy code for analysis. Includes language selection and round analysis buttons.*
 
-![Match Results](screenshots/match-results.png)
+![Match Results](match-results.png)
 *The swiping interface displaying potential matches with compatibility scores, error types, and personalized pickup lines based on programming languages.*
 
-![Profile Editor](screenshots/profile-editor.png)
+![Profile Editor](profile-editor.png)
 *Enhanced profile editing modal with proper icons, gender selection, and dating preferences for inclusive matching.*
 
-![Code Analysis](screenshots/code-analysis.png)
+![Code Analysis](code-analysis.png)
 *Advanced code analysis results showing technical metrics, personality insights, and relationship compatibility in a professional dashboard layout.*
 
-![Pickup Generator](screenshots/pickup-generator.png)
+![Pickup Generator](pickup-generator.png)
 *The pickup line generator with programming language-specific romantic one-liners, including Malayalam translations for cultural diversity.*
 
 ### Diagrams
 
-![Workflow](diagrams/tinderror-workflow.png)
+![Workflow](tinderror-workflow.png)
 *Application workflow showing user journey from registration through code analysis to finding matches. Demonstrates the unique matching algorithm based on programming errors.*
 
-![Architecture](diagrams/system-architecture.png)
+![Architecture](system-architecture.png)
 *System architecture diagram showing the single-page application structure with component-based sections and state management flow.*
 
 ## Project Demo
 
 ### Video
-[Tinderror Demo Video](https://youtu.be/demo-link)
+[Tinderror Demo Video](video.mp4)
 *Complete walkthrough demonstrating user registration, profile creation, code submission, analysis results, match browsing, and pickup line generation features.*
-
-### Additional Demos
-- **Live Demo:** [https://tinderror-demo.netlify.app](https://tinderror-demo.netlify.app)
-- **Interactive Prototype:** [Figma Prototype Link](https://figma.com/proto/tinderror)
-- **Code Analysis Demo:** Sample code submissions with different programming languages
-- **Mobile Responsive Demo:** Testing across various device sizes
 
 ## Key Features
 
