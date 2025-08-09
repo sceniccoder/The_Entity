@@ -90,14 +90,6 @@ npx http-server
 ![Pickup Generator](pickup-generator.jpeg)
 *The pickup line generator with programming language-specific romantic one-liners, including Malayalam translations for cultural diversity.*
 
-### Diagrams
-
-![Workflow](tinderror-workflow.jpeg)
-*Application workflow showing user journey from registration through code analysis to finding matches. Demonstrates the unique matching algorithm based on programming errors.*
-
-![Architecture](system-architecture.jpeg)
-*System architecture diagram showing the single-page application structure with component-based sections and state management flow.*
-
 ## Project Demo
 
 ### Video
