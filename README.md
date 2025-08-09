@@ -4,7 +4,7 @@
 **Team Name:** Debug Hearts  
 **Team Members:**
 - **Team Lead:** M Soorya Narayan - Muthoot Institute of Technology and Science
-- **Member 2:** Aaron Varkey Mohan - Muthoot Institute of Technology and Science 
+- **Team Co-Lead:** Aaron Varkey Mohan - Muthoot Institute of Technology and Science 
 
 
 ## Project Description
